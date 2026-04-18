@@ -1,0 +1,1000 @@
+* {
+    padding : 0px ;
+    margin : 0px ;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --maincolor : #00abf0 ;
+    --scound-color : #081b29 ;
+}
+
+::-webkit-scrollbar {
+    width : 10px ;
+    height : 10px ;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color : var(--maincolor);
+    transition-delay: 0.1s;
+    transition-duration: 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color : #008bc2 ;
+}
+
+header {
+    width : 100% ;
+    min-height : 100vh ;
+    background-color: var(--scound-color);
+    display : grid ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 120px 1fr ;
+    grid-template-areas: "title nav" "cont cont";
+}   
+
+header .title {
+    grid-area : title ;
+    display : flex ;
+    justify-content: start;
+    align-items: center;
+}
+
+header .title h2 a {
+    color : #EEE ;
+    margin : 20px ;
+    transition-delay: 0.25s;
+    transition-duration: 0.5s;
+}
+
+header nav {
+    grid-area : nav ;
+    display : flex ;
+    justify-content: end;
+    align-items: center;
+}
+
+header nav ul {
+    display : inline-flex;
+    justify-self: space-between;
+    margin-right : 20px ;
+}
+
+header nav ul li {
+    margin : 20px ;
+}
+
+header nav ul li  a {
+    color : #EEE ;
+    transition-delay: 0.25s;
+    transition-duration: 0.5s;
+}
+
+header nav ul li a:hover ,
+header .title h2 a:hover ,
+header nav ul li .Active {
+    color : var(--maincolor);
+}
+
+header .cont {
+    grid-area: cont;
+}
+
+header .cont h1 ,
+header .cont h2 ,
+header .cont p {
+    color : #EEE ;
+    margin-left : 50px;
+    margin-bottom : 30px;
+}
+
+header .cont h1 {
+    margin-top : 60px ;
+    font-size: 50px;
+}
+
+header .cont h2 {
+    font-size: 30px;
+}
+
+header .cont p {
+    width : 50% ;
+}
+
+header .cont h1 span ,
+header .cont h2 span {
+    color : var(--maincolor);
+}
+
+header .cont .box-btn {
+    display : flex ;
+    justify-content: space-between;
+    max-width : 25% ;
+    margin-left : 40px;
+    padding : 6px 15px ;
+}
+
+header .cont .box-btn button {
+    min-height : 100% ;
+    width : 45% ;
+    padding : 12px 30px ;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition-delay: 0.25s;
+    transition-duration: 1s;
+}
+
+header .cont .box-btn button:nth-child(1) {
+    background-color: var(--scound-color);
+    color: var(--maincolor);
+    border: 2px solid var(--maincolor);
+    border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    -moz-border-radius: 8px ;
+    -ms-border-radius: 8px ;
+    -o-border-radius: 8px ;
+}
+
+header .cont .box-btn button:nth-child(1)::before {
+    content : "" ;
+    position: absolute;
+    right : 0 ;
+    top : 0 ;
+    width : 0% ;
+    height : 100% ;
+    background-color : var(--maincolor); 
+    transition-delay: 0.25s;
+    transition-duration: 1s;
+    transition-property: width 0.75s;
+    z-index: -1 ;
+}
+
+header .cont .box-btn button:nth-child(1):hover::before {
+    width : 100% ;
+    cursor: pointer;
+}
+
+header .cont .box-btn button:nth-child(1):hover {
+    color : var(--scound-color);
+    box-shadow: 0px 0px 5px var(--maincolor);
+    cursor: pointer;
+}
+
+
+header .cont .box-btn button:nth-child(2) {
+    background-color: var(--maincolor);
+    color: var(--scound-color);
+    border: 2px solid var(--maincolor);
+    border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    -moz-border-radius: 8px ;
+    -ms-border-radius: 8px ;
+    -o-border-radius: 8px ;
+}
+
+header .cont .box-btn button:nth-child(2)::before {
+    content : "" ;
+    position: absolute;
+    left : 0 ;
+    top : 0 ;
+    width : 0% ;
+    height : 100% ;
+    background-color : var(--scound-color); 
+    transition-delay: 0.25s;
+    transition-duration: 1s;
+    transition-property: width 0.75s;
+    z-index: -1 ;
+}
+
+header .cont .box-btn button:nth-child(2):hover::before {
+    width : 100% ;
+    cursor: pointer;
+}
+
+header .cont .box-btn button:nth-child(2):hover {
+    color : var(--maincolor);
+    box-shadow: 0px 0px 5px var(--maincolor);
+    cursor: pointer;
+}
+
+/*--------------------------------------
+----------- Home *-* ^-^ ---------------
+----------------------------------------
+*/
+
+.About {
+    width : 100% ;
+    min-height : 100vh ;
+    background-color : var(--scound-color);
+    display : grid ;
+    grid-template-rows: 120px repeat(2 , auto) ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "cont img" "btn .";
+}
+
+.About .title {
+    grid-area: title ; 
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.About .title h1 {
+    color : #EEE;
+}
+
+.About .title h1 span {
+    color : var(--maincolor);
+}
+
+.About .cont {
+    grid-area: cont ;
+}
+
+.About .cont h3 ,
+.About .cont h4 ,
+.About .cont p {
+    color : #EEE ;
+    margin-left : 50px ;
+    margin-bottom : 30px ;
+} 
+
+.About .cont h3 {
+    margin-top : 90px ;
+}
+
+.About .cont h3 span ,
+.About .cont h4 span {
+    color:  var(--maincolor);
+}
+
+.About .img {
+    display: grid;
+    grid-area: img;
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.About .box-btn {
+    grid-area: btn;
+    display : flex ;
+    align-items: center;
+}
+
+.About .box-btn button {
+    position: relative;
+    width: 20% ;
+    padding: 12px 30px ;
+    margin-left: 70px ;
+    background-color: var(--scound-color);
+    color: var(--maincolor);
+    border: 2px solid var(--maincolor);
+    border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    -moz-border-radius: 8px ;
+    -ms-border-radius: 8px ;
+    -o-border-radius: 8px ;
+    transition-delay: 0.25s;
+    transition-duration: 1s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.About .box-btn button::before {
+    content : "" ;
+    position: absolute;
+    top : 0; 
+    right : 0 ;
+    left : 0; 
+    width : 100% ;
+    height : 0% ;
+    background-color:  var(--maincolor);
+    z-index: -1;
+    transition-delay: 0.25s;
+    transition-duration: 1s;
+    transition-property: height 0.75s;
+}
+
+.About .box-btn button:hover::before {
+    height : 100% ;
+    cursor: pointer;
+}
+
+.About .box-btn button:hover {
+    cursor: pointer;
+    color : var(--scound-color);
+    box-shadow: 0px 0px 5px var(--maincolor);
+}
+
+/*--------------------------------------
+----------- About *-* ^-^ --------------
+----------------------------------------
+*/
+
+.Services {
+    width : 100% ;
+    min-height : 100vh ;
+    background-color : var(--scound-color);
+    display : grid ;
+    grid-template-rows: 120px 1fr 80px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "cont ulCont" "btn .";
+}
+
+.Services .title {
+    grid-area : title ;
+    display : flex ;
+    align-items: center;
+    justify-content: center;
+}
+
+.Services .title h1 {
+    color : #EEE;
+}
+
+.Services .title h1 span {
+    color : var(--maincolor);
+}
+
+.Services .cont {
+    display : grid ;
+    grid-area: cont ;
+}
+
+.Services .cont h4 ,
+.Services .cont p {
+    color : #EEE;
+    margin-left : 50px ;
+}
+
+.Services .cont p {
+    width : 75% ;
+}
+
+.Services .cont h4 span {
+    color : var(--maincolor);
+}
+
+.Services .box-btn {
+    grid-area : btn ;
+    display : flex ;
+    justify-content: center;
+    align-items: start;
+}
+
+.Services .box-btn button {
+    position: relative;
+    padding: 12px 30px ;
+    width: 20%;
+    background-color: var(--scound-color);
+    color: var(--maincolor);
+    border: 2px solid var(--maincolor);
+    border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    -moz-border-radius: 8px ;
+    -ms-border-radius: 8px ;
+    -o-border-radius: 8px ;
+    transition-delay: 0.25s;
+    transition-duration: 1s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.Services .box-btn button::before {
+    content : "" ;
+    position: absolute;
+    bottom : 0; 
+    right : 0 ;
+    left : 0; 
+    width : 100% ;
+    height : 0% ;
+    background-color:  var(--maincolor);
+    z-index: -1;
+    transition-delay: 0.25s;
+    transition-duration: 1s;
+    transition-property: height 0.75s;
+}
+
+.Services .box-btn button:hover::before {
+    height : 100% ;
+    cursor: pointer;
+}
+
+.Services .box-btn button:hover {
+    cursor: pointer;
+    color : var(--scound-color);
+    box-shadow: 0px 0px 5px var(--maincolor);
+}
+
+.Services .ulCont {
+    grid-area : ulCont ;
+}
+
+.Services .ulCont ul li {
+    color : #EEE;
+    margin-bottom : 90px ;
+}
+
+.Services .ulCont ul li:nth-child(1) {
+    margin-top : 20px ;
+}
+
+.Services .ulCont ul li span {
+    color : var(--maincolor);
+}
+
+/*--------------------------------------
+----------- Serveces *-* ^-^ -----------
+----------------------------------------
+*/
+
+footer {
+    width : 100% ;
+    min-height : 10vh ;
+    background-color : var(--scound-color);
+    display : grid ;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-areas: "cont" "lnk";
+}
+
+footer .cont {
+    grid-area : cont ;
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .cont p {
+    color : #EEE;
+    font-size : 15px ;
+}
+
+footer .links {
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .links ul {
+    display : inline-flex ;
+}
+
+footer .links ul li {
+    margin : 7px ;
+}
+
+footer .links ul li a {
+    color : #EEE ;
+    font-size: 15px ;
+    transition-delay: 0.25s;
+    transition-duration: 0.5s;
+}
+
+footer .links ul li a:hover {
+    color : var(--maincolor);
+}
+
+/*--------------------------------------
+----------- Footer *-* ^-^ -----------
+----------------------------------------
+*/
+
+@media (max-width : 575px) {
+    header {
+        grid-template-rows: 80px 80px 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "nav" "cont";
+    }
+
+    header .title {
+        max-width: fit-content;
+        grid-area : title ;
+        display : flex ;
+        justify-content: start;
+        align-items: center;
+    }
+
+    header nav {
+        grid-area : nav ;
+        display : flex ;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    header nav ul {
+        margin : 25px ;
+        width : fit-content ;
+    }
+
+    header nav ul li {
+        margin : 10px ;
+    }
+
+    header nav h2 {
+        margin-left : 15px ;
+    }
+
+    header .cont {
+        grid-area: cont;
+        max-width : fit-content ;
+    }
+
+    header .cont h1 ,
+    header .cont h2 ,
+    header .cont p {
+        margin : 35px ;
+        margin-right : 0px ;
+    }
+
+    header .cont h1 {
+        width : fit-content ;
+    }
+
+    header .cont h2 {
+        width : 75% ;
+    }
+
+    header .cont p {
+        line-height: 1.6;
+    }
+    
+    header .box-btn {
+        min-width : 75% ;
+        padding : 3px 7.5px ;
+        margin : 0px ;
+    }
+
+    .About {
+        grid-template-rows: 80px 1fr 80px  ;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "cont" "btn";
+    }
+
+    .About .title {
+        grid-area : title ;
+    }
+
+    .About .cont {
+        grid-area : cont ;
+    }
+
+    .About .cont h3 ,
+    .About .cont h4 ,
+    .About .cont p {
+        margin : 0px ;
+        margin-left : 35px ;
+    }
+
+    .About .cont h3 {
+        margin-top : 60px;
+        margin-bottom : 100px ;
+    }
+
+    .About .cont h4 {
+        margin-bottom : 25px ;
+    }
+
+    .About .cont p {
+        width : 70% ;
+        line-height: 1.4;
+    }
+
+    .About .box-btn {
+        grid-area : btn ;
+        display : flex ;
+        justify-content: start;
+    }
+
+    .About .box-btn button {
+        min-width : 37.5% ;
+        margin: 0px auto;
+    }
+
+    .About .img {
+        display : none ;
+    }
+
+    .Services {
+        grid-template-rows: 80px repeat(2 , 1fr) 80px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "cont" "ulCont" "btn";
+    }
+
+    .Services .title {
+        grid-area : title ;
+    }
+
+    .Services .cont {
+        grid-area : cont ;
+    }
+
+    .Services .cont h4 ,
+    .Services .cont p {
+        margin : 35px ;
+    } 
+
+    .Services .cont h4 {
+        margin-top : 50px ;
+    }
+    
+    .Services .cont p {
+        margin-top : -120px ;
+    }
+
+    .Services .ulCont {
+        grid-area: ulCont;
+        display : flex ;
+        justify-content: center;
+    }
+
+    .Services .ulCont ul {
+        width : 75% ;
+    }
+
+    .Services .box-btn {
+        grid-area: btn;
+        display : flex ;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Services .box-btn button{
+        width : 37.5% ;
+        margin-left : -30px; 
+    }
+
+    footer {
+        grid-template-rows: repeat(2 , 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: "cont" "lnk";
+    }
+}
+
+@media (min-width : 576px) and (max-width : 767px) {
+    header {
+        grid-template-rows: 80px 1fr;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-template-areas: "title nav" "cont cont";
+    }
+
+    header .title {
+        max-width: fit-content;
+        grid-area : title ;
+        display : flex ;
+        justify-content: start;
+        align-items: center;
+    }
+
+    header nav {
+        grid-area : nav ;
+        display : flex ;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    header nav ul {
+        margin : 25px ;
+        width : fit-content ;
+    }
+
+    header nav ul li {
+        margin : 10px ;
+    }
+
+    header nav h2 {
+        margin-left : 15px ;
+    }
+
+    header .cont {
+        grid-area: cont;
+        max-width : fit-content ;
+    }
+
+    header .cont h1 ,
+    header .cont h2 ,
+    header .cont p {
+        margin : 35px ;
+        margin-right : 0px ;
+    }
+
+    header .cont h1 {
+        width : fit-content ;
+    }
+
+    header .cont h2 {
+        width : 75% ;
+    }
+
+    header .cont p {
+        line-height: 1.6;
+    }
+    
+    header .box-btn {
+        min-width : 75% ;
+        padding : 3px 7.5px ;
+        margin : 0px ;
+    }
+
+    .About {
+        grid-template-rows: 80px 1fr 80px  ;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "cont" "btn";
+    }
+
+    .About .title {
+        grid-area : title ;
+    }
+
+    .About .cont {
+        grid-area : cont ;
+    }
+
+    .About .cont h3 ,
+    .About .cont h4 ,
+    .About .cont p {
+        margin : 0px ;
+        margin-left : 35px ;
+    }
+
+    .About .cont h3 {
+        margin-top : 60px;
+        margin-bottom : 100px ;
+    }
+
+    .About .cont h4 {
+        margin-bottom : 25px ;
+    }
+
+    .About .cont p {
+        width : 70% ;
+        line-height: 1.4;
+    }
+
+    .About .box-btn {
+        grid-area : btn ;
+        display : flex ;
+        justify-content: start;
+    }
+
+    .About .box-btn button {
+        min-width : 37.5% ;
+        margin: 0px auto;
+    }
+
+    .About .img {
+        display : none ;
+    }
+
+    .Services {
+        grid-template-rows: 80px repeat(2 , 1fr) 80px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "cont" "ulCont" "btn";
+    }
+
+    .Services .title {
+        grid-area : title ;
+    }
+
+    .Services .cont {
+        grid-area : cont ;
+    }
+
+    .Services .cont h4 ,
+    .Services .cont p {
+        margin : 35px ;
+    } 
+
+    .Services .cont h4 {
+        margin-top : 50px ;
+    }
+    
+    .Services .cont p {
+        margin-top : -120px ;
+    }
+
+    .Services .ulCont {
+        grid-area: ulCont;
+        display : flex ;
+        justify-content: center;
+    }
+
+    .Services .ulCont ul {
+        width : 75% ;
+    }
+
+    .Services .box-btn {
+        grid-area: btn;
+        display : flex ;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Services .box-btn button{
+        width : 37.5% ;
+        margin-left : -30px; 
+    }
+
+    footer {
+        grid-template-rows: repeat(2 , 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: "cont" "lnk";
+    }
+}
+
+@media (min-width : 767px) and (max-width : 991px) {
+    header {
+        grid-template-rows: 80px 1fr;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-template-areas: "title nav" "cont cont";
+    }
+
+    header .title {
+        max-width: fit-content;
+        grid-area : title ;
+        display : flex ;
+        justify-content: start;
+        align-items: center;
+    }
+
+    header nav {
+        grid-area : nav ;
+        display : flex ;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    header nav ul {
+        margin : 25px ;
+        width : fit-content ;
+    }
+
+    header nav ul li {
+        margin : 10px ;
+    }
+
+    header nav h2 {
+        margin-left : 15px ;
+    }
+
+    header .cont {
+        grid-area: cont;
+        max-width : fit-content ;
+    }
+
+    header .cont h1 ,
+    header .cont h2 ,
+    header .cont p {
+        margin : 35px ;
+        margin-right : 0px ;
+    }
+
+    header .cont h1 {
+        width : fit-content ;
+    }
+
+    header .cont h2 {
+        width : 75% ;
+    }
+
+    header .cont p {
+        line-height: 1.6;
+    }
+    
+    header .box-btn {
+        min-width : 75% ;
+        padding : 3px 7.5px ;
+        margin : 0px ;
+    }
+
+    .About {
+        grid-template-rows: 80px 1fr 80px  ;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-template-areas: "title title " "cont img" "btn .";
+    }
+
+    .About .title {
+        grid-area : title ;
+    }
+
+    .About .cont {
+        grid-area : cont ;
+    }
+
+    .About .cont h3 ,
+    .About .cont h4 ,
+    .About .cont p {
+        margin : 0px ;
+        margin-left : 35px ;
+    }
+
+    .About .cont h3 {
+        margin-top : 60px;
+        margin-bottom : 100px ;
+    }
+
+    .About .cont h4 {
+        margin-bottom : 25px ;
+    }
+
+    .About .cont p {
+        width : 70% ;
+        line-height: 1.4;
+    }
+
+    .About .box-btn {
+        grid-area : btn ;
+        display : flex ;
+        justify-content: start;
+    }
+
+    .About .box-btn button {
+        min-width : 37.5% ;
+        margin: 0px auto;
+    }
+
+
+    /* .Services {
+        grid-template-rows: 80px repeat(2 , 1fr) 80px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "cont" "ulCont" "btn";
+    }
+
+    .Services .title {
+        grid-area : title ;
+    }
+
+    .Services .cont {
+        grid-area : cont ;
+    }
+
+    .Services .cont h4 ,
+    .Services .cont p {
+        margin : 35px ;
+    } 
+
+    .Services .cont h4 {
+        margin-top : 50px ;
+    }
+    
+    .Services .cont p {
+        margin-top : -120px ;
+    }
+
+    .Services .ulCont {
+        grid-area: ulCont;
+        display : flex ;
+        justify-content: center;
+    }
+
+    .Services .ulCont ul {
+        width : 75% ;
+    } */
+
+    .Services .box-btn {
+        grid-area: btn;
+        display : flex ;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Services .box-btn button{
+        width : 37.5% ;
+        margin-left : -30px; 
+    }
+
+}
+
+
+
+
+/* هاي هدية الك اخوي ميسم تستاهل احسن منها */
