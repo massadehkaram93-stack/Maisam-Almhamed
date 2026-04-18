@@ -1,0 +1,271 @@
+* {
+    padding : 0px ;
+    margin : 0px ;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --maincolor : #00abf0 ;
+    --scound-color : #081b29 ;
+}
+
+header {
+    width : 100% ;
+    min-height : 100vh;
+    background-color : var(--scound-color);
+    display : grid ;
+    grid-template-rows: 120px 1fr;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-areas: "title title" "form cont";
+}
+
+header .title {
+    grid-area : title ;
+    display : flex ;
+    align-items: center;
+    justify-content: center;
+}
+
+header .title h1 {
+    color : #EEE ;
+}
+
+header .title h1 span {
+    color : var(--maincolor);
+}
+
+header form {
+    grid-area : form ;
+}
+
+header form label {
+    color : #EEE ;
+    font-size: 24px;
+    margin-left : 50px ;
+    transition-delay: 0.25s;
+    transition-duration: 0.5s;
+}
+
+header form input {
+    padding: 6px 15px;
+    transition-delay: 0.25s;
+    transition-duration: 0.5s;
+    margin-bottom: 20px  ;
+    border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    -moz-border-radius: 8px ;
+    -ms-border-radius: 8px ;
+    -o-border-radius: 8px ;
+    outline: none;
+    border : 2px solid transparent ;
+}
+
+header form textarea {
+    width: 25% ;
+    height: 10% ;
+    margin-left: 50px ;
+    transition-delay: 0.25s;
+    transition-duration:1s;
+    transition-property: height 0.75s width 0.75s;
+    border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    -moz-border-radius: 8px ;
+    -ms-border-radius: 8px ;
+    -o-border-radius: 8px ;
+    border : 2px solid transparent ;
+    outline: none;
+}
+
+header form label:hover {
+    color : var(--maincolor);
+    cursor: pointer;
+}
+
+header form input:hover ,
+header form textarea:hover{
+    border-color : var(--maincolor);
+}
+
+header form input:focus {
+    border-color : var(--maincolor);
+    background-color : var(--scound-color) ;
+    color : var(--maincolor);
+    box-shadow: 0px 0px 5px var(--maincolor);
+}
+
+header form textarea:focus {
+    width : 35% ;
+    height : 15% ;
+    background-color : var(--scound-color);
+    border-color : var(--maincolor);
+    color : var(--maincolor);
+    box-shadow: 0px 0px 5px var(--maincolor);
+}
+
+header form .btn {
+    margin-left : 75px ;
+    width : 20% ;
+    color : var(--maincolor);
+    background-color : var(--scound-color);
+    border : 2px solid var(--maincolor);
+    transition-delay: 0.25s;
+    transition-duration: 0.5s;
+}
+
+header form .btn:hover {
+    background-color : var(--maincolor);
+    color : var(--scound-color);
+    box-shadow: 0px 0px 5px var(--maincolor);
+    cursor: pointer;
+}
+
+header .cont {
+    display : grid ;
+    grid-area : cont ;
+
+}
+
+header .cont p {
+    color : #EEE;
+}
+
+header .cont p span {
+    color : var(--maincolor);
+}
+
+/*--------------------------------------
+----------- Header *-* ^-^ -----------
+----------------------------------------
+*/
+
+footer {
+    width : 100% ;
+    min-height : 10vh ;
+    background-color : var(--scound-color);
+    display : grid ;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-areas: "cont" "lnk";
+}
+
+footer .cont {
+    grid-area : cont ;
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .cont p {
+    color : #EEE;
+    font-size : 15px ;
+}
+
+footer .links {
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .links ul {
+    display : inline-flex ;
+}
+
+footer .links ul li {
+    margin : 7px ;
+}
+
+footer .links ul li a {
+    color : #EEE ;
+    font-size: 15px ;
+    transition-delay: 0.25s;
+    transition-duration: 0.5s;
+}
+
+footer .links ul li a:hover {
+    color : var(--maincolor);
+}
+
+/*--------------------------------------
+----------- Footer *-* ^-^ -----------
+----------------------------------------
+*/
+
+@media (max-width : 575px) {
+    header {
+        min-height : 110vh ;
+        grid-template-rows: 80px 1fr 1fr ;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "form" "cont";
+    }
+
+    header label:nth-child(1) {
+        margin-top : 5cqb ;
+    }
+
+    header form textarea {
+        width : 50% ;
+        height : 20% ;
+    }
+
+    header form textarea:focus {
+        width : 60% ;
+        height : 25% ;
+    }
+
+    header .cont {
+        grid-area : cont ;
+        align-items: end;
+        justify-content: center;
+    }
+
+    header .cont p:nth-child(2){
+        margin-bottom : 30px ;
+    }
+
+    footer {
+        grid-template-rows: repeat(2 , 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: "cont" "lnk";
+    }
+}
+
+@media (min-width : 576px) and (max-width : 767px) {
+    header {
+        min-height : 110vh ;
+        grid-template-rows: 80px 1fr 1fr ;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "form" "cont";
+    }
+
+    header label:nth-child(1) {
+        margin-top : 5cqb ;
+    }
+
+    header form textarea {
+        width : 50% ;
+        height : 20% ;
+    }
+
+    header form textarea:focus {
+        width : 60% ;
+        height : 25% ;
+    }
+
+    header .cont {
+        grid-area : cont ;
+        align-items: end;
+        justify-content: center;
+    }
+
+    header .cont p:nth-child(2){
+        margin-bottom : 30px ;
+    }
+
+    footer {
+        grid-template-rows: repeat(2 , 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: "cont" "lnk";
+    }
+}
